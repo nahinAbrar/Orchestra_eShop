@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_appLogo"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/app_logo">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/main_appMotto"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_appLogo"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_motto"
+        android:textAlignment="center"
+        android:textColor="@color/mystic"
+        android:textSize="22sp"
+        android:textStyle="italic">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/main_registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_loginButton"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_outer_design"
+        android:text="@string/welcome_register"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="italic">
+
+    </Button>
+
+    <Button
+        android:id="@+id/main_loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_fill"
+        android:text="@string/welcome_login"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="italic">
+
+    </Button>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

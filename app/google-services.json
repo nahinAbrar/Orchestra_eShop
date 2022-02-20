@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "348975713331",
+    "project_id": "orchestra-eshop-2122an",
+    "storage_bucket": "orchestra-eshop-2122an.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348975713331:android:14f0d0f21b11c82d282746",
+        "android_client_info": {
+          "package_name": "com.first_android_project.orchestraeshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348975713331-139onnervum0drv2a1sveaq6hn6julcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU806Ri-mj1NaiADG_OtUhuVpu-SJSiHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348975713331-139onnervum0drv2a1sveaq6hn6julcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

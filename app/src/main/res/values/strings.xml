@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Orchestra eShop</string>
+    <string name="app_logo">Logo of App</string>
+    <string name="app_motto">Buy Your Needs</string>
+    <string name="welcome_login">Already Have an Account? Log In</string>
+    <string name="welcome_register">Join Orchestra Now!</string>
+    <string name="register_firstName">First Name</string>
+    <string name="register_lastName">Last Name</string>
+    <string name="register_userName">Username</string>
+    <string name="register_email">Email</string>
+    <string name="register_passWord">PassWord</string>
+    <string name="register_confirmPass">Re-type Password</string>
+    <string name="register_phoneNumber">Phone Number</string>
+    <string name="register_buttonTxt">Create Account</string>
+
+    <string name="login_">Register</string>
+</resources>
