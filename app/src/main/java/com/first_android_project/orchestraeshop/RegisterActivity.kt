@@ -30,7 +30,7 @@ class RegisterActivity : AppCompatActivity() {
             val user = User(firstName,lastName,userName,email,phoneNum,passWord)
 
             reference.child(userName).setValue(user).addOnSuccessListener {
-                Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Account Created", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, MainActivity::class.java))
             }.addOnFailureListener {
                 Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
