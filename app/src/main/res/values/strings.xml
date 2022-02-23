@@ -12,7 +12,9 @@
     <string name="register_confirmPass">Re-type Password</string>
     <string name="register_phoneNumber">Phone Number</string>
     <string name="register_buttonTxt">Create Account</string>
+    <string name="register_buttonTxtLog">Have an Account Already? Log In</string>
     <string name="login_remember">Remember Me</string>
     <string name="login_forgot">Forgot Password?</string>
     <string name="login_button">Log In</string>
+    <string name="admin_login">Admin Login</string>
 </resources>

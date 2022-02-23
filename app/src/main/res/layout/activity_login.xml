@@ -53,38 +53,42 @@
 
     </EditText>
 
-    <CheckBox
-        android:id="@+id/login_r_pass"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="6dp"
-        android:layout_below="@id/login_passWord"
-        android:text="@string/login_remember"
-        android:textSize="16sp">
-    </CheckBox>
-
-    <Button
-        android:id="@+id/forgot_button"
+    <LinearLayout
+        android:id="@+id/chk_fgt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login_button"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/button_outer_design"
-        android:text="@string/login_forgot"
-        android:textAllCaps="false"
-        android:textSize="16sp">
+        android:layout_below="@+id/login_passWord"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
 
-    </Button>
+        <CheckBox
+            android:id="@+id/login_r_pass"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+
+            android:text="@string/login_remember"
+            android:textSize="16sp">
+        </CheckBox>
+
+        <TextView
+            android:id="@+id/forgot_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_forgot"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd">
+        </TextView>
+    </LinearLayout>
 
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login_r_pass"
+        android:layout_below="@id/chk_fgt"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"

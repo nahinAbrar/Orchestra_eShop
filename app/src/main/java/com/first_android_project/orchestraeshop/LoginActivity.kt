@@ -19,27 +19,47 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginButton.setOnClickListener {
             val userName = binding.loginUserName.text.toString()
-            val passWord = binding.loginPassWord.text.toString()
+            val passWord = binding.loginPassWord.text.toString().trim()
+
+
 
             reference = FirebaseDatabase.getInstance("https://orchestra-eshop-2122an-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
 
-            reference.child(userName).get().addOnSuccessListener {
-                if(it.exists())
-                {
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    Toast.makeText(this, "Logged In", Toast.LENGTH_LONG).show()
+            if(userName.isEmpty() || passWord.isEmpty())
+            {
 
+                Snackbar.make(it,"Username/PassWord Can not be Empty",Snackbar.LENGTH_LONG).show()
 
-
-                }
-                else{
-                    Toast.makeText(this, "User Not Found", Toast.LENGTH_LONG).show()
-                }
-
-
-            }.addOnFailureListener {
-                Toast.makeText(this, "Read Failed",Toast.LENGTH_SHORT).show()
+            }
+            else
+            {
+                loginUser(userName, passWord)
             }
         }
+    }
+
+    private fun loginUser(userName: String, passWord: String) {
+        reference.child(userName).get().addOnSuccessListener {
+            if(it.exists()) {
+                val getPass = it.child("passWord").value
+                if (passWord == getPass) {
+                    binding.loginUserName.text.clear()
+                    binding.loginPassWord.text.clear()
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT).show()
+                }
+                else{
+
+                    Toast.makeText(this, "PassWord Does Not Match.", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+            else{
+                Toast.makeText(this, "User Not Found", Toast.LENGTH_LONG).show()
+            }
+        }.addOnFailureListener {
+            Toast.makeText(this, "Network Error, Please Try Again",Toast.LENGTH_LONG).show()
+        }
+
     }
 }

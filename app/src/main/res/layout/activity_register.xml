@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <com.github.ybq.android.spinkit.SpinKitView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/spin_kit"
-        style="@style/SpinKitView.Large.Circle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:SpinKit_Color="@color/mystic" />
 
     <ImageView
         android:id="@+id/register_appLogo"
@@ -23,6 +15,7 @@
         android:layout_marginTop="50dp"
         android:contentDescription="@string/app_logo"
         android:src="@drawable/app_logo">
+
     </ImageView>
 
     <EditText
@@ -151,7 +144,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/register_re_passWord"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="14dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_fill"
@@ -159,6 +152,21 @@
         android:text="@string/register_buttonTxt"
         android:textAllCaps="false"
         android:textSize="18sp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/register_logInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_button"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/button_outer_design"
+        android:text="@string/register_buttonTxtLog"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="italic">
 
     </Button>
 
