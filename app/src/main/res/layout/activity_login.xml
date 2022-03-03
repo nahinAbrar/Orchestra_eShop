@@ -101,4 +101,39 @@
 
     </Button>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_button"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/login_admin_panel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login_admin"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/login_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_user"
+            android:visibility="invisible"
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
 </RelativeLayout>

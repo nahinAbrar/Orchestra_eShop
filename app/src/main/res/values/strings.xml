@@ -16,5 +16,8 @@
     <string name="login_remember">Remember Me</string>
     <string name="login_forgot">Forgot Password?</string>
     <string name="login_button">Log In</string>
-    <string name="admin_login">Admin Login</string>
+    <string name="login_admin">Admin Panel</string>
+    <string name="login_user">User Log In</string>
+
+
 </resources>

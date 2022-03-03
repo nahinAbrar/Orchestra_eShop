@@ -3,6 +3,7 @@ package com.first_android_project.orchestraeshop
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.first_android_project.orchestraeshop.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
@@ -11,11 +12,30 @@ import com.google.firebase.database.*
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var reference: DatabaseReference
+    private lateinit var parentName: String
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        parentName = "Users"
+
+        binding.loginAdminPanel.setOnClickListener{
+            binding.loginButton.text = "Admin Entry"
+            binding.loginAdminPanel.visibility  = View.INVISIBLE
+            binding.loginUser.visibility  = View.VISIBLE
+            parentName = "Admins"
+        }
+
+        binding.loginUser.setOnClickListener{
+            binding.loginButton.text = "Log In"
+            binding.loginAdminPanel.visibility  = View.VISIBLE
+            binding.loginUser.visibility  = View.INVISIBLE
+            parentName = "Users"
+        }
 
         binding.loginButton.setOnClickListener {
             val userName = binding.loginUserName.text.toString()
@@ -23,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
 
 
 
-            reference = FirebaseDatabase.getInstance("https://orchestra-eshop-2122an-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
+            reference = FirebaseDatabase.getInstance("https://orchestra-eshop-2122an-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference(parentName)
 
             if(userName.isEmpty() || passWord.isEmpty())
             {
@@ -39,14 +59,32 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser(userName: String, passWord: String) {
+
+
+
         reference.child(userName).get().addOnSuccessListener {
             if(it.exists()) {
                 val getPass = it.child("passWord").value
                 if (passWord == getPass) {
-                    binding.loginUserName.text.clear()
-                    binding.loginPassWord.text.clear()
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT).show()
+
+                    if(parentName.equals("Admins"))
+                    {
+                        binding.loginUserName.text.clear()
+                        binding.loginPassWord.text.clear()
+                        startActivity(Intent(this, AdminNewProductActivity::class.java))
+                        Toast.makeText(this, "Welcome Admin!", Toast.LENGTH_SHORT).show()
+
+                    }
+                    else
+                    {
+                        binding.loginUserName.text.clear()
+                        binding.loginPassWord.text.clear()
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT).show()
+                    }
+
+
+
                 }
                 else{
 
