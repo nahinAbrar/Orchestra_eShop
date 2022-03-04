@@ -1,6 +1,7 @@
 package com.first_android_project.orchestraeshop
 
-import android.app.Dialog
+
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -34,6 +35,14 @@ class RegisterActivity : AppCompatActivity() {
             val passWord = binding.registerPassWord.text.toString()
             val repassWord = binding.registerRePassWord.text.toString()
 
+            @Suppress("DEPRECATION")
+            val progressDialog = ProgressDialog(this)
+            @Suppress("DEPRECATION")
+            progressDialog.setMessage("Verifying Data.. Be Patient")
+            progressDialog.setTitle("Register")
+            progressDialog.setCancelable(false)
+            progressDialog.show()
+
             reference = FirebaseDatabase.getInstance("https://orchestra-eshop-2122an-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
             val user = User(firstName,lastName,userName,email,phoneNum,passWord)
 
@@ -43,6 +52,7 @@ class RegisterActivity : AppCompatActivity() {
                 phoneNum.isEmpty() || passWord.isEmpty() || repassWord.isEmpty())
                 {
                 Toast.makeText(this, "One or more fields are empty", Toast.LENGTH_LONG).show()
+                    progressDialog.dismiss()
             }
             else
             {
@@ -62,6 +72,7 @@ class RegisterActivity : AppCompatActivity() {
                         }
                     } else {
                         Toast.makeText(this, "Password doesn't match", Toast.LENGTH_LONG).show()
+                        progressDialog.dismiss()
                     }
             }
 
