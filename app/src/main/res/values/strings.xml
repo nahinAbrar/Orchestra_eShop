@@ -24,6 +24,11 @@
     <string name="category_bag">Bag</string>
     <string name="category_shoes">Shoes</string>
     <string name="category_watch">Watch</string>
+    <string name="new_product_image">Product Image</string>
+    <string name="new_product_nameHint">Product Name</string>
+    <string name="new_product_descriptionHint">Product Description</string>
+    <string name="new_product_priceHint">Price</string>
+    <string name="new_product_addProduct">Add Product</string>
 
 
 

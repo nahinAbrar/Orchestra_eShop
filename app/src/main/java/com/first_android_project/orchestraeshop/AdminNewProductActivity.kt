@@ -15,7 +15,7 @@ class AdminNewProductActivity : AppCompatActivity() {
 
         categoryName = intent.extras?.get("category").toString()
 
-        Snackbar.make(binding.root,categoryName,Snackbar.LENGTH_LONG).show()
+        /*Snackbar.make(binding.root,categoryName,Snackbar.LENGTH_LONG).show()*/
 
 
     }
