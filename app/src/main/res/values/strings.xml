@@ -18,6 +18,13 @@
     <string name="login_button">Log In</string>
     <string name="login_admin">Admin Panel</string>
     <string name="login_user">User Log In</string>
+    <string name="category_new">Add New Product</string>
+    <string name="category_shirt">T Shirts</string>
+    <string name="category_dress">Dress</string>
+    <string name="category_bag">Bag</string>
+    <string name="category_shoes">Shoes</string>
+    <string name="category_watch">Watch</string>
+
 
 
 </resources>

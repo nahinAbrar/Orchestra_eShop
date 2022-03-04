@@ -67,11 +67,11 @@ class LoginActivity : AppCompatActivity() {
                 val getPass = it.child("passWord").value
                 if (passWord == getPass) {
 
-                    if(parentName.equals("Admins"))
+                    if(parentName == "Admins")
                     {
                         binding.loginUserName.text.clear()
                         binding.loginPassWord.text.clear()
-                        startActivity(Intent(this, AdminNewProductActivity::class.java))
+                        startActivity(Intent(this, AdminCategoryActivity::class.java))
                         Toast.makeText(this, "Welcome Admin!", Toast.LENGTH_SHORT).show()
 
                     }
