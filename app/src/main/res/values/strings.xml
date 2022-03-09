@@ -24,11 +24,30 @@
     <string name="category_bag">Bag</string>
     <string name="category_shoes">Shoes</string>
     <string name="category_watch">Watch</string>
+    <string name="category_sunGlass">Watch</string>
     <string name="new_product_image">Product Image</string>
     <string name="new_product_nameHint">Product Name</string>
     <string name="new_product_descriptionHint">Product Description</string>
     <string name="new_product_priceHint">Price</string>
     <string name="new_product_addProduct">Add Product</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">User Name</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">User Profile Pic</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_orders">Orders</string>
+    <string name="menu_logout">Log out</string>
+
+    <string name="fragment_home_product">Product Name</string>
+    <string name="fragment_home_productImage">Product Image</string>
+    <string name="fragment_home_product_desc">Product Description</string>
+    <string name="fragment_home_product_price">Product Price</string>
+
 
 
 

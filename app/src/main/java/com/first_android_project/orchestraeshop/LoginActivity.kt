@@ -17,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -78,6 +79,7 @@ class LoginActivity : AppCompatActivity() {
                         binding.loginPassWord.text.clear()
                         startActivity(Intent(this, AdminCategoryActivity::class.java))
                         Toast.makeText(this, "Welcome Admin!", Toast.LENGTH_SHORT).show()
+                        if(progressDialog.isShowing) progressDialog.dismiss()
 
                     }
                     else
@@ -86,6 +88,7 @@ class LoginActivity : AppCompatActivity() {
                         binding.loginPassWord.text.clear()
                         startActivity(Intent(this, HomeActivity::class.java))
                         Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT).show()
+                        if(progressDialog.isShowing) progressDialog.dismiss()
                     }
 
 

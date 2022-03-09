@@ -7,5 +7,5 @@ data class User(val firstName : String? = null
                 ,val phoneNum : String? = null
                 ,val passWord : String? = null)
 {
-
+    
 }

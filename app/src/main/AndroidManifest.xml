@@ -10,13 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrchestraEShop">
         <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.OrchestraEShop.NoActionBar" />
+        <activity
             android:name=".AdminCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".AdminNewProductActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
