@@ -21,7 +21,8 @@
             android:text="@string/fragment_home_product"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp">
+            android:textSize="20sp"
+            android:textStyle="bold">
 
         </TextView>
 

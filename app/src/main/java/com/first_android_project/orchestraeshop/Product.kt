@@ -1,6 +1,6 @@
 package com.first_android_project.orchestraeshop
 
-data class Product(val productName : String? = null
+data class Product(val name : String? = null
                    ,val description : String? = null
                    ,val price : String? = null
                    ,val image : String? = null

@@ -24,7 +24,6 @@ import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.first_android_project.orchestraeshop.databinding.ActivityHomeBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
 
 class HomeActivity : AppCompatActivity() {
@@ -98,7 +97,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        productReference = FirebaseDatabase.getInstance("https://orchestra-eshop-2122an-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference().child("Products")
+        productReference = FirebaseDatabase.getInstance("https://orchestra-eshop-2122an-default-rtdb.asia-southeast1.firebasedatabase.app/").reference.child("Products")
 
         val options = FirebaseRecyclerOptions.Builder<Product>()
             .setQuery(productReference,Product::class.java).build()
@@ -111,8 +110,8 @@ class HomeActivity : AppCompatActivity() {
             }
 
             override fun onBindViewHolder(holder: ProductViewHolder, position: Int, model: Product) {
-                holder.productName.text = model.productName
-                holder.productPrice.setText("Price: " + model.price)
+                holder.productName.text = model.name
+                holder.productPrice.text = "Price: " + model.price
                 holder.productDescription.text = model.description
                 Picasso.get().load(model.image).into(holder.productImage)
 
