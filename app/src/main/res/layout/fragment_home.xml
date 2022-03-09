@@ -20,18 +20,20 @@
             android:layout_height="wrap_content"
             android:text="@string/fragment_home_product"
             android:textAlignment="center"
-            android:textSize="20sp"
-            android:textColor="@color/black">
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
         </TextView>
 
         <ImageView
             android:id="@+id/product_image"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:contentDescription="@string/new_product_image"
             android:layout_below="@+id/product_name"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="2dp">
+            android:layout_marginTop="2dp"
+            android:contentDescription="@string/new_product_image"
+            android:scaleType="centerCrop">
+
         </ImageView>
 
         <TextView
@@ -58,6 +60,14 @@
             android:textSize="20sp"
             android:textColor="@color/black">
         </TextView>
+
+<!--        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_menU"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+        </androidx.recyclerview.widget.RecyclerView>-->
 
     </RelativeLayout>
 

@@ -15,11 +15,11 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/mobile_navigation" />
 
-<!--    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_menU"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical">
 
-    </androidx.recyclerview.widget.RecyclerView>-->
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
