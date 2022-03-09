@@ -1,6 +1,7 @@
 package com.first_android_project.orchestraeshop
 
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
@@ -69,30 +70,29 @@ class AdminNewProductActivity : AppCompatActivity() {
         productDescription = binding.newProductDescription.text.toString()
         productPrice = binding.newProductPrice.text.toString()
 
-        if(imageURI == null)
-        {
-            Toast.makeText(this,"Image is Mandatory",Toast.LENGTH_SHORT).show()
-        }
-        else if(TextUtils.isEmpty(productName))
-        {
-            Toast.makeText(this,"Enter Product Name",Toast.LENGTH_SHORT).show()
-        }
-        else if(TextUtils.isEmpty(productDescription))
-        {
-            Toast.makeText(this,"Enter Product Description",Toast.LENGTH_SHORT).show()
-        }
-        else if(TextUtils.isEmpty(productPrice))
-        {
-            Toast.makeText(this,"Enter Product Price",Toast.LENGTH_SHORT).show()
-        }
-        else
-        {
-            storeProductInfo()
+
+        when {
+            TextUtils.isEmpty(productName) -> {
+                Toast.makeText(this,"Image is Mandatory",Toast.LENGTH_SHORT).show()
+            }
+            TextUtils.isEmpty(productName) -> {
+                Toast.makeText(this,"Enter Product Name",Toast.LENGTH_SHORT).show()
+            }
+            TextUtils.isEmpty(productDescription) -> {
+                Toast.makeText(this,"Enter Product Description",Toast.LENGTH_SHORT).show()
+            }
+            TextUtils.isEmpty(productPrice) -> {
+                Toast.makeText(this,"Enter Product Price",Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                storeProductInfo()
+            }
         }
 
     }
 
 
+    @SuppressLint("SimpleDateFormat")
     private fun storeProductInfo() {
 
         @Suppress("DEPRECATION")
@@ -101,7 +101,7 @@ class AdminNewProductActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         progressDialog.setTitle("Adding New Product")
         @Suppress("DEPRECATION")
-        progressDialog.setMessage("Adding New Product to the Specified Category...")
+        progressDialog.setMessage("Product Information is being uploaded to database, Please Wait..")
         progressDialog.setCancelable(false)
         progressDialog.show()
 
@@ -140,6 +140,7 @@ class AdminNewProductActivity : AppCompatActivity() {
                         downloadImageUrl = task.result.toString()
                         Toast.makeText(this,"got Product Image Url successfully", Toast.LENGTH_SHORT).show()
                         saveProductInfo()
+
                     }
                 }
 
@@ -163,6 +164,7 @@ class AdminNewProductActivity : AppCompatActivity() {
                 startActivity(Intent(this,AdminCategoryActivity::class.java))
 
                 Toast.makeText(this,"Product is Added Successfully", Toast.LENGTH_SHORT).show()
+
             }
             else
             {
@@ -197,4 +199,5 @@ class AdminNewProductActivity : AppCompatActivity() {
             binding.newProductImage.setImageURI(imageURI)
         }
     }
+
 }

@@ -32,5 +32,14 @@ class AdminCategoryActivity : AppCompatActivity() {
         binding.categoryWatch.setOnClickListener{
             startActivity(Intent(this,AdminNewProductActivity::class.java).putExtra("category","Watch"))
         }
+
+        binding.categorySunGlass.setOnClickListener{
+            startActivity(Intent(this,AdminNewProductActivity::class.java).putExtra("category","Sunglass"))
+        }
+
+        //logout admin
+        binding.categoryAdminLogout.setOnClickListener {
+            startActivity(Intent(this,LoginActivity::class.java))
+        }
     }
 }

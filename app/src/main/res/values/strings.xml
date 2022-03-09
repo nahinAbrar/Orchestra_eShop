@@ -24,6 +24,7 @@
     <string name="category_bag">Bag</string>
     <string name="category_shoes">Shoes</string>
     <string name="category_watch">Watch</string>
+    <string name="category_logout">Log out</string>
     <string name="category_sunGlass">Watch</string>
     <string name="new_product_image">Product Image</string>
     <string name="new_product_nameHint">Product Name</string>
