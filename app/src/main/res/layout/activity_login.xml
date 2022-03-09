@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="180dp"
         android:contentDescription="@string/app_logo"
-        android:src="@drawable/app_logo">
+        android:src="@drawable/logo">
 
     </ImageView>
 

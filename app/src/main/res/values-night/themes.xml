@@ -2,11 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.OrchestraEShop" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/naval</item>
-        <item name="colorPrimaryVariant">@color/grey</item>
+        <item name="colorPrimary">@color/ash</item>
+        <item name="colorPrimaryVariant">@color/naval</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/sky</item>
+        <item name="colorSecondary">@color/purple_200</item>
         <item name="colorSecondaryVariant">@color/blueSky</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="grad_start">#718093</color>
+    <color name="grad_start">#40739e</color>
     <color name="grad_center">#dcdde1</color>
     <color name="grad_end">#487eb0</color>
     <color name="register_grad_start">#757F9A</color>
@@ -11,6 +11,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ash">#576574</color>
     <color name="darkAsh">#222f3e</color>
+    <color name="redisH">#d63031</color>
+    <color name="pink">#fd79a8</color>
     <color name="sky">#54a0ff</color>
     <color name="blueSky">#54a0ff</color>
     <color name="naval">#40739e</color>

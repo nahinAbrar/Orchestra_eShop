@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.loginButton.setOnClickListener {
-            val userName = binding.loginUserName.text.toString()
+            val userName = binding.loginUserName.text.toString().trim()
             val passWord = binding.loginPassWord.text.toString().trim()
 
             reference = FirebaseDatabase.getInstance("https://orchestra-eshop-2122an-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference(parentName)
